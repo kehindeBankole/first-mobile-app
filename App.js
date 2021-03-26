@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   Image,
   Button,
+  ScrollView,
 } from 'react-native';
 
 function Ad({name, click}) {
@@ -47,7 +48,7 @@ const App = () => {
       <Button
         style={{flex: 1}}
         onPress={handleToggle}
-        title="show ?"
+        title="show?"
         color="black"
       />
       {/* <TouchableOpacity onPress={handleToggle}>
@@ -63,8 +64,8 @@ const style = StyleSheet.create({
     height: '100%',
     flex: 1,
     flexDirection: 'row',
-    alignItems: 'flex-start',
-    justifyContent: 'center',
+    alignItems: 'center',
+    justifyContent: 'space-evenly',
   },
 });
 
