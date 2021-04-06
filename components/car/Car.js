@@ -13,12 +13,20 @@ export default function Car(props) {
     <View style={styles.carContainer}>
       <ImageBackground source={props.img} style={styles.imagebg} />
 
-      <View style={{padding: 10}}>
+      <View
+        style={{
+          paddingBottom: "20%",
+          paddingHorizontal: 20,
+          flexDirection: 'column',
+          justifyContent: 'space-between',
+          // backgroundColor: 'white',
+          height: Dimensions.get('window').height,
+        }}>
         <View style={styles.titles}>
           <Text style={styles.head}>{props.head}</Text>
           <Text></Text>
         </View>
-        <View style={{position: 'relative'}}>
+        <View style={{alignItems: 'flex-end'}}>
           <Pressable
             style={{
               backgroundColor: `${props.bg}`,
@@ -29,11 +37,13 @@ export default function Car(props) {
               flexDirection: 'row',
               alignItems: 'center',
               marginTop: 20,
-            }}>
+            }}
+            onPress={()=>alert("23")}
+            >
             <Text style={styles.btntext}>custom order</Text>
           </Pressable>
           <Pressable
-          onPress={()=>console.log("12")}
+            onPress={() => console.log('12')}
             style={{
               backgroundColor: `${props.bg}`,
               height: 50,
@@ -56,6 +66,7 @@ const styles = StyleSheet.create({
   carContainer: {
     height: Dimensions.get('window').height,
     width: Dimensions.get('window').width,
+    flexDirection: 'column',
   },
   titles: {
     marginTop: '10%',

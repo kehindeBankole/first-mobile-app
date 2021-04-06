@@ -19,8 +19,8 @@ import Car from './components/car/Car';
 const App = () => {
   let da = [
     {name: 'model S', imagebg: require('./assets/tesla.jpeg')},
-    {name: 'model X', imagebg: require('./assets/21618.jpg')},
-    {name: 'model Z', imagebg: require('./assets/2038607.jpg')},
+    {name: 'model X', imagebg: require('./assets/486595.jpg')},
+    {name: 'model E', imagebg: require('./assets/2038607.jpg')},
   ];
   return (
     <View style={style.container}>
@@ -28,7 +28,7 @@ const App = () => {
         data={da}
         renderItem={({item}) => <Car img={item.imagebg} bg="red" head={item.name}/>}
         snapToAlignment={'start'}
-        decelerationRate={`fast`}
+        // decelerationRate={`slow`}
         snapToInterval={Dimensions.get('window').height}
         showsVerticalScrollIndicator={false}
       />
