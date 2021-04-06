@@ -40,7 +40,7 @@ export default function Car(props) {
             }}
             onPress={()=>alert("23")}
             >
-            <Text style={styles.btntext}>custom order</Text>
+            <Text style={styles.btntext}>{props.btntext}</Text>
           </Pressable>
           <Pressable
             onPress={() => console.log('12')}

@@ -16,7 +16,7 @@ import {
   Dimensions,
 } from 'react-native';
 import Car from './components/car/Car';
-const App = () => {
+const App = (props) => {
   let da = [
     {name: 'model S', imagebg: require('./assets/tesla.jpeg')},
     {name: 'model X', imagebg: require('./assets/486595.jpg')},
@@ -26,7 +26,9 @@ const App = () => {
     <View style={style.container}>
       <FlatList
         data={da}
-        renderItem={({item}) => <Car img={item.imagebg} bg="red" head={item.name}/>}
+        renderItem={({item}) => (
+          <Car img={item.imagebg} btntext="custom order" bg="yellow" head={item.name} />
+        )}
         snapToAlignment={'start'}
         // decelerationRate={`slow`}
         snapToInterval={Dimensions.get('window').height}
