@@ -13,33 +13,24 @@ import {
   Alert,
   ImageBackground,
   StatusBar,
+  Dimensions,
 } from 'react-native';
-
+import Car from './components/car/Car';
 const App = () => {
-  let data = [
-    {key: 'Devin'},
-    {key: 'Dan'},
-    {key: 'Dominic'},
-    {key: 'Jackson'},
-    // {key: 'James'},
-    // {key: 'Joel'},
-    // {key: 'John'},
-    // {key: 'Jillian'},
-    // {key: 'Jimmy'},
-    // {key: 'Julie'},
+  let da = [
+    {name: 'model S', imagebg: require('./assets/tesla.jpeg')},
+    {name: 'model X', imagebg: require('./assets/21618.jpg')},
+    {name: 'model Z', imagebg: require('./assets/2038607.jpg')},
   ];
   return (
     <View style={style.container}>
-      <ImageBackground
-        source={require('./assets/665373.jpg')}
-        style={style.imagebg}
+      <FlatList
+        data={da}
+        renderItem={({item}) => <Car img={item.imagebg} bg="red" head={item.name}/>}
+        snapToAlignment={'start'}
+        decelerationRate={`fast`}
+        snapToInterval={Dimensions.get('window').height}
       />
-      <View style={style.carContainer}>
-        <View style={style.titles}>
-          <Text style={style.head}>model s</Text>
-          <Text></Text>
-        </View>
-      </View>
       <StatusBar style="auto" />
     </View>
   );
@@ -47,9 +38,9 @@ const App = () => {
 
 const style = StyleSheet.create({
   container: {
-    backgroundColor: 'red',
     alignItems: 'center',
     justifyContent: 'center',
+    flex: 1,
   },
   carContainer: {
     height: '100%',
