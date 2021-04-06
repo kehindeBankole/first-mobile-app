@@ -18,7 +18,7 @@ export default function Car(props) {
           <Text style={styles.head}>{props.head}</Text>
           <Text></Text>
         </View>
-        <View style={{position: 'relative', bottom: -500}}>
+        <View style={{position: 'relative'}}>
           <Pressable
             style={{
               backgroundColor: `${props.bg}`,
@@ -33,6 +33,7 @@ export default function Car(props) {
             <Text style={styles.btntext}>custom order</Text>
           </Pressable>
           <Pressable
+          onPress={()=>console.log("12")}
             style={{
               backgroundColor: `${props.bg}`,
               height: 50,

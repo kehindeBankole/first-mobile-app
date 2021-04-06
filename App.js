@@ -30,6 +30,7 @@ const App = () => {
         snapToAlignment={'start'}
         decelerationRate={`fast`}
         snapToInterval={Dimensions.get('window').height}
+        showsVerticalScrollIndicator={false}
       />
       <StatusBar style="auto" />
     </View>
