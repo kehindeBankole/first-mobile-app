@@ -29,10 +29,11 @@ const App = (props) => {
         renderItem={({item}) => (
           <Car img={item.imagebg} btntext="custom order" bg="yellow" head={item.name} />
         )}
-        snapToAlignment={'start'}
+        // snapToAlignment={'start'}
         // decelerationRate={`slow`}
-        snapToInterval={Dimensions.get('window').height}
+        snapToInterval={Dimensions.get('window').width}
         showsVerticalScrollIndicator={false}
+        horizontal={true}
       />
       <StatusBar style="auto" />
     </View>
